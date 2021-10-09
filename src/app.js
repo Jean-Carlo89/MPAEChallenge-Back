@@ -44,6 +44,6 @@ app.get("/allData", async (req, res) => {
     
 });
 
-app.listen(4000,() =>{
-   console.log("app rodando") 
+app.listen(process.env.PORT,() =>{
+   console.log(`app rodando em ${process.env.PORT}`) 
 });
