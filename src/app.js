@@ -4,8 +4,9 @@ import axios from "axios";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({origin:"*"}));
 app.use(express.json());
+
 app.use(function(req,res,next){
   res.header("Access-Control-Allow-Origin","https://mpaec-hallenge.vercel.app/")
   res.header("Access-Control-Allow-Origin","Origin,X-Requested-With,Content-Type,Accept")
