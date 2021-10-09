@@ -22,6 +22,23 @@ app.get("/topSongs", async (req, res) => {
     
 });
 
+
+app.get("/allData", async (req, res) => {
+  
+  console.log(req.query)
+  
+    axios.get(`https://api.deezer.com/search/${req.query.type}?q=${req.query.search}&index=${req.query.index}`)
+    .then((response)=>{
+     
+        res.send(response.data).status(200)
+    })
+    .catch((er)=>{
+      res.sendStatus(400)
+    })
+  
+    
+});
+
 app.listen(4000,() =>{
    console.log("app rodando") 
 });
