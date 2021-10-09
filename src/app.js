@@ -39,6 +39,4 @@ app.get("/allData", async (req, res) => {
     
 });
 
-app.listen(process.env.PORT,() =>{
-   console.log(`app rodando em ${process.env.PORT}`) 
-});
+export default app;
