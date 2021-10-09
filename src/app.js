@@ -4,7 +4,7 @@ import axios from "axios";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({origin: "https://mpaec-hallenge.vercel.app/"}));
 app.use(express.json());
 
 
